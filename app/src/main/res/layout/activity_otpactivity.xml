@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:background="#FEFEFE"
+    tools:context=".OTPActivity">
+    <ImageView
+        android:src="@drawable/imagen4"
+        android:layout_width="250dp"
+        android:layout_height="350dp" />
+    <TextView
+        android:id="@+id/telefonoLble"
+        android:text="Verificar +953412304"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|normal"
+        android:textColor="#94E0AB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Ingresa el OTP Codigo para Verificar tu Telefono"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textColor="#424040"
+        android:textStyle="normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.cardview.widget.CardView
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.mukesh.OtpView
+                android:id="@+id/otp_view"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:inputType="number"
+                android:itemBackground="#B6B6B6"
+                android:focusableInTouchMode="true"
+                app:OtpItemCount="6"
+                app:OtpLineColor="#91E2A8"
+                app:OtpViewType="line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/continueBtn01"
+                android:layout_marginTop="5sp"
+                android:text="Continuar"
+                android:textStyle="bold|normal"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:backgroundTint="#91E2A7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
